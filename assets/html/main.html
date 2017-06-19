@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Watcher Club</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.min.css">
+ <script language="JavaScript">
+<!--
+function calculateBmi() {
+var weight = document.bmiForm.weight.value/2.20462
+var height = document.bmiForm.height.value
+if(weight > 0 && height > 0){   
+var finalBmi = weight/(height/100*height/100)
+document.bmiForm.bmi.value = finalBmi
+if(finalBmi < 18.5){
+document.bmiForm.meaning.value = "That you are too thin."
+}
+if(finalBmi > 18.5 && finalBmi < 25){
+document.bmiForm.meaning.value = "That you are healthy."
+}
+if(finalBmi > 25){
+document.bmiForm.meaning.value = "That you have overweight."
+}
+}
+else{
+alert("Please Fill in everything correctly")
+}
+}
+//-->
+</script>
+</head>
+
+<body>
+    <div> <!--Starting Nav Bar -->
+        <nav class="navbar navbar-default navigation-clean" style="background-color:#2980ef;color:rgb(242,240,240);font-size:20px;">
+            <div class="container">
+                <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">HEALTH WATCHER CLUB</a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active" role="presentation"><a href="#" style="background-color:rgba(0,0,0,0.0980392);color:#dfe8ee;">Home </a></li>
+                        <li role="presentation"><a href="registration.html" style="color:#dfe8ee;">Profile</a></li>
+                        <li role="presentation"><a href="../../index.html" style="color:#dfe8ee;">Logout </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div style="background-color:#222222;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="width:510px;">
+                    <div class="carousel slide" data-ride="carousel" id="carousel-1">
+                        <div class="carousel-inner" role="listbox" style="width:524px;"></div>
+                        <div><a class="left carousel-control" href="#carousel-1" role="button" data-slide="prev"><span class="sr-only">Previous</span></a>
+                            <a class="right carousel-control" href="#carousel-1" role="button" data-slide="next" style="width:154px;"></a>
+                        </div>
+                        <ol class="carousel-indicators"></ol>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="font-color:"white">
+                    <h1 class="text-center text-primary">BMI Calculator</h1>
+                    <form name="bmiForm" style="background-color: lightgoldenrodyellow;"><br />
+                        Your Weight(lbs): <input type="text" name="weight" size="10"><br /><br />
+                        Your Height(cm): <input type="text" name="height" size="10"><br /><br />
+                        <input type="button" value="Calculate BMI" onClick="calculateBmi()"> &nbsp  <input type="reset" value="Reset" /><br /><br />
+                        Your BMI  : <input type="text" name="bmi" size="10"><br />
+                        This Means: <input type="text" name="meaning" size="25"><br /><br/>
+                       
+                     </form>
+
+                    </div>
+                <div class="col-md-4"> <h1 class="text-center text-primary">Food Chart </h1> 
+                <img src = "../img/calorieChart.jpg" width="100%">
+                </div>
+                <div class="col-md-4" align="center">
+                    <h1 class="text-center text-primary">Watch Health Videos</h1><iframe width="250" height="200" src="https://www.youtube.com/embed/0aNNYEUARAk" frameborder="1" allowfullscreen></iframe></div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Health Report</h1></div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"><strong>HEIGHT AND WEIGHT</strong>
+                    <p> doesn't contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.Paragraph</p>
+                </div>
+                <div class="col-md-3"><strong>CATAGORY YOU ARE IN</strong>
+                    <p> doesn't contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.Paragraph</p>
+                </div>
+                <div class="col-md-3"><strong>BODYMASS </strong>
+                    <p> doesn't contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.Paragraph</p>
+                </div>
+                <div class="col-md-3"><strong>DAILY CALORIES SUGGESTED</strong>
+                    <p> doesn't contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.Paragraph</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-md-pull-6 col-sm-4 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12 col-sm-4 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">HEALTH WATCHER © 2017</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
