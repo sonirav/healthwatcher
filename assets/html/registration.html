@@ -24,9 +24,9 @@
                 </div>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="presentation" role="presentation"><a href="main.html" style="background-color:rgba(0,0,0,0.0980392);color:#dfe8ee;">Home </a></li>
-                        <li role="active"><a href="#" style="color:#dfe8ee;">Profile</a></li>
-                        <li role="presentation"><a href="../../index.html" style="color:#dfe8ee;">Logout </a></li>
+                        <li class="presentation" role="disabled"><a href="/login" style="color:#dfe8ee;">Home </a></li>
+                        <li role="active"><a href="#" style="background-color:rgba(0,0,0,0.0980392);color:#dfe8ee;">Profile</a></li>
+                        <li role="presentation"><a href="/login" style="color:#dfe8ee;">Logout </a></li>
                     </ul>
                 </div>
             </div>
@@ -35,7 +35,7 @@
     <div id="content" class="content-wrap" align="center"><img class="img-circle" src="assets/img/RUNNING.jpg" width="50%" height="50%"></div>
     <div class="container">
         <div>
-            <form>
+            <form action="/registration" method="post">
                 <div class="form-group">
                     <div id="formdiv">
                         <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
@@ -53,64 +53,34 @@
                             <div class="col-md-10 col-md-offset-1">
                                 <select class="form-control" name="gender" style="font-family:Roboto, sans-serif;">
                                     <optgroup label="Gender">
-                                        <option value="">Male</option>
-                                        <option value="">Female</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
                                     </optgroup>
                                 </select>
                             </div>
                         </div>
                         <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
                             <div class="col-md-8 col-md-offset-1">
-                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Birth Date</strong></p>
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Goal Weight</strong></p>
                             </div>
                             <div class="col-md-10 col-md-offset-1">
-                                <input class="form-control" type="date" name="birthDate" style="font-family:Roboto, sans-serif;">
+                                <input class="form-control" type="number" name="goalWeight" style="font-family:Roboto, sans-serif;">
                             </div>
                         </div>
                         <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
                             <div class="col-md-8 col-md-offset-1">
-                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Permenent Address</strong></p>
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;">Height(in) </p>
                             </div>
                             <div class="col-md-10 col-md-offset-1">
-                                <textarea class="form-control" placeholder="Address" style="font-family:Roboto, sans-serif;"></textarea>
+                                <input class="form-control" name="height" type="number">
                             </div>
                         </div>
                         <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
                             <div class="col-md-8 col-md-offset-1">
-                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;">Height </p>
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;">Weight(lbs) </p>
                             </div>
                             <div class="col-md-10 col-md-offset-1">
-                                <input class="form-control" type="number">
-                            </div>
-                        </div>
-                        <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
-                            <div class="col-md-8 col-md-offset-1">
-                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;">Weight </p>
-                            </div>
-                            <div class="col-md-10 col-md-offset-1">
-                                <input class="form-control" type="number">
-                            </div>
-                        </div>
-                        <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
-                            <div class="col-md-8 col-md-offset-1">
-                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;">Thigh Measurement</p>
-                            </div>
-                            <div class="col-md-10 col-md-offset-1">
-                                <input class="form-control" type="number">
-                            </div>
-                        </div>
-                        <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
-                            <div class="col-md-8 col-md-offset-1">
-                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;">Food Preference</p>
-                            </div>
-                            <div class="col-md-10 col-md-offset-1">
-                                <select class="form-control">
-                                    <optgroup label="This is a group">
-                                        <option value="12" selected="">This is item 1</option>
-                                        <option value="13">This is item 2</option>
-                                        <option value="14">This is item 3</option>
-                                    </optgroup>
-                                </select>
+                                <input class="form-control" name="weight" type="number">
                             </div>
                         </div>
                         <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
@@ -118,7 +88,7 @@
                                 <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;">Email </p>
                             </div>
                             <div class="col-md-10 col-md-offset-1">
-                                <input class="form-control" type="email">
+                                <input class="form-control" name="email" type="email">
                             </div>
                         </div>
                         <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
@@ -126,15 +96,7 @@
                                 <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;">Password </p>
                             </div>
                             <div class="col-md-10 col-md-offset-1">
-                                <input class="form-control" type="password">
-                            </div>
-                        </div>
-                        <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
-                            <div class="col-md-8 col-md-offset-1">
-                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;">Confirm Password</p>
-                            </div>
-                            <div class="col-md-10 col-md-offset-1">
-                                <input class="form-control" type="password">
+                                <input class="form-control" name="password" type="password">
                             </div>
                         </div>
                         <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">

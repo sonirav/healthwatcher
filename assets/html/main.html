@@ -37,16 +37,18 @@ alert("Please Fill in everything correctly")
 
 <body>
     <div> <!--Starting Nav Bar -->
-        <nav class="navbar navbar-default navigation-clean" style="background-color:#2980ef;color:rgb(242,240,240);font-size:20px;">
+  <nav class="navbar navbar-default navigation-clean" style="background-color:#2980ef;color:rgb(242,240,240);font-size:20px;">
             <div class="container">
+    
                 <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">HEALTH WATCHER CLUB</a>
                     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                 </div>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active" role="presentation"><a href="#" style="background-color:rgba(0,0,0,0.0980392);color:#dfe8ee;">Home </a></li>
-                        <li role="presentation"><a href="registration.html" style="color:#dfe8ee;">Profile</a></li>
-                        <li role="presentation"><a href="../../index.html" style="color:#dfe8ee;">Logout </a></li>
+                        <li role="presentation"><a href="/registration" style="color:#dfe8ee;">Profile</a></li>
+                          <li role="presentation"><a href="/calculate" style="color:#dfe8ee;">Health Calculators</a></li>
+                        <li role="presentation"><a href="/index" style="color:#dfe8ee;">Logout </a></li>
                     </ul>
                 </div>
             </div>
@@ -55,55 +57,44 @@ alert("Please Fill in everything correctly")
     <div style="background-color:#222222;">
         <div class="container">
             <div class="row">
-                <div class="col-md-12" style="width:510px;">
-                    <div class="carousel slide" data-ride="carousel" id="carousel-1">
-                        <div class="carousel-inner" role="listbox" style="width:524px;"></div>
-                        <div><a class="left carousel-control" href="#carousel-1" role="button" data-slide="prev"><span class="sr-only">Previous</span></a>
-                            <a class="right carousel-control" href="#carousel-1" role="button" data-slide="next" style="width:154px;"></a>
-                        </div>
-                        <ol class="carousel-indicators"></ol>
+                <div class="col-lg-6" >
+                   <div class="col-lg-12" align="center">
+                    <h1 class="text-center text-primary">Health News Feed</h1>
+                    <div style="max-height: 70%; overflow: auto;">
+                    <!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="33746/"></script> <!-- end feedwind code -->
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4" style="font-color:"white">
-                    <h1 class="text-center text-primary">BMI Calculator</h1>
-                    <form name="bmiForm" style="background-color: lightgoldenrodyellow;"><br />
-                        Your Weight(lbs): <input type="text" name="weight" size="10"><br /><br />
-                        Your Height(cm): <input type="text" name="height" size="10"><br /><br />
-                        <input type="button" value="Calculate BMI" onClick="calculateBmi()"> &nbsp  <input type="reset" value="Reset" /><br /><br />
-                        Your BMI  : <input type="text" name="bmi" size="10"><br />
-                        This Means: <input type="text" name="meaning" size="25"><br /><br/>
-                       
-                     </form>
 
                     </div>
-                <div class="col-md-4"> <h1 class="text-center text-primary">Food Chart </h1> 
-                <img src = "../img/calorieChart.jpg" width="100%">
                 </div>
-                <div class="col-md-4" align="center">
-                    <h1 class="text-center text-primary">Watch Health Videos</h1><iframe width="250" height="200" src="https://www.youtube.com/embed/0aNNYEUARAk" frameborder="1" allowfullscreen></iframe></div>
+                <div class="col-md-6">
+                  <div class="col-md-12" align="center">
+                    <h1 class="text-center text-primary">Watch Health Videos</h1><iframe width="100%" height="400px" src="https://www.youtube.com/embed/0aNNYEUARAk" frameborder="1" allowfullscreen></iframe></div>
+                </div>
+            </div>
+
+
+              
             </div>
         </div>
-    </div>
-    <div>
+
+
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Health Report</h1></div>
+                    <h1>Health 101</h1></div>
             </div>
             <div class="row">
-                <div class="col-md-3"><strong>HEIGHT AND WEIGHT</strong>
-                    <p> doesn't contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.Paragraph</p>
+                <div class="col-lg-3" style="text-align: justify;"><strong>HEIGHT AND WEIGHT</strong>
+                           <p> Here's the simple fact: You can eat lettuce and work-out all day long and never lose any weight if you don't balance your blood sugar and hormones. But that's nearly impossible for the majority of people because most folks living in the modern world are desperately addicted to sugar. If you feel like you can't give up sweets, or you can't give up dessert, or you can't give up pizza, pasta or bread (these are broken down nearly instantly into sugar)... then you know exactly what I'm talking about. And if you think that's bad... it's actually even worse: Because it's now been proven that synthetic sweeteners that many people rely on to help them reduce sugar in their diets are actually worse for you. Studies after studies have shown that these zero-calorie synthetic sweeteners actually trigger chemical reactions in the body that cause you to produce more fat and gain more weight. </p>
                 </div>
-                <div class="col-md-3"><strong>CATAGORY YOU ARE IN</strong>
-                    <p> doesn't contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.Paragraph</p>
+                <div class="col-lg-3" style="text-align: justify;"><strong>TDEE</strong>
+                    <p> When you exercise or simply expend energy through physical activity, you burn additional calories. When you combine your BMR with the calories you burn through physical activity, you get your <b>Total Daily Energy Expenditure.</b></p>
                 </div>
-                <div class="col-md-3"><strong>BODYMASS </strong>
-                    <p> doesn't contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.Paragraph</p>
+                <div class="col-lg-3" style="text-align: justify;"><strong>BODYMASS </strong>
+                    <p> Body mass index: A key index for relating weight to height. Abbreviated BMI. BMI is a person's weight in kilograms (kg) divided by his or her height in meters squared. The National Institutes of Health (NIH) now defines normal weight, overweight, and obesity according to BMI rather than the traditional height/weight charts. Overweight is a BMI of 27.3 or more for women and 27.8 or more for men. Obesity is a BMI of 30 or more for either sex (about 30 pounds overweight). A very muscular person might have a high BMI without health risks.</p>
                 </div>
-                <div class="col-md-3"><strong>DAILY CALORIES SUGGESTED</strong>
-                    <p> doesn't contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.Paragraph</p>
+                <div class="col-lg-3" style="text-align: justify;"><strong>DAILY CALORIES SUGGESTED</strong>
+                    <p> Losing 10 lbs. in one month is a challenging but achievable goal. Most slow and steady diet and exercise plans have you losing around 2 lbs. per week. As you track your daily calories, remember that you can trim calories by changing your diet as well as exercising. Maintain your weight loss once the month is over by making lifestyle changes in your diet plan and workout schedule. Check with your health care provider before your begin any new exercise program or make changes in your diet for weight loss.</p>
                 </div>
             </div>
         </div>
