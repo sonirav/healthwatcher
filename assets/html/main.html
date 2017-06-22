@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Watcher Club</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.min.css">
+ <script language="JavaScript">
+<!--
+function calculateBmi() {
+var weight = document.bmiForm.weight.value/2.20462
+var height = document.bmiForm.height.value
+if(weight > 0 && height > 0){   
+var finalBmi = weight/(height/100*height/100)
+document.bmiForm.bmi.value = finalBmi
+if(finalBmi < 18.5){
+document.bmiForm.meaning.value = "That you are too thin."
+}
+if(finalBmi > 18.5 && finalBmi < 25){
+document.bmiForm.meaning.value = "That you are healthy."
+}
+if(finalBmi > 25){
+document.bmiForm.meaning.value = "That you have overweight."
+}
+}
+else{
+alert("Please Fill in everything correctly")
+}
+}
+//-->
+</script>
+</head>
+
+<body>
+    <div> <!--Starting Nav Bar -->
+  <nav class="navbar navbar-default navigation-clean" style="background-color:#2980ef;color:rgb(242,240,240);font-size:20px;">
+            <div class="container">
+    
+                <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">HEALTH WATCHER CLUB</a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active" role="presentation"><a href="#" style="background-color:rgba(0,0,0,0.0980392);color:#dfe8ee;">Home </a></li>
+                        <li role="presentation"><a href="/registration" style="color:#dfe8ee;">Profile</a></li>
+                          <li role="presentation"><a href="/calculate" style="color:#dfe8ee;">Health Calculators</a></li>
+                        <li role="presentation"><a href="/index" style="color:#dfe8ee;">Logout </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div style="background-color:#222222;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" >
+                   <div class="col-lg-12" align="center">
+                    <h1 class="text-center text-primary">Health News Feed</h1>
+                    <div style="max-height: 70%; overflow: auto;">
+                    <!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="33746/"></script> <!-- end feedwind code -->
+                    </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="col-md-12" align="center">
+                    <h1 class="text-center text-primary">Watch Health Videos</h1><iframe width="100%" height="400px" src="https://www.youtube.com/embed/0aNNYEUARAk" frameborder="1" allowfullscreen></iframe></div>
+                </div>
+            </div>
+
+
+              
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Health 101</h1></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3" style="text-align: justify;"><strong>HEIGHT AND WEIGHT</strong>
+                           <p> Here's the simple fact: You can eat lettuce and work-out all day long and never lose any weight if you don't balance your blood sugar and hormones. But that's nearly impossible for the majority of people because most folks living in the modern world are desperately addicted to sugar. If you feel like you can't give up sweets, or you can't give up dessert, or you can't give up pizza, pasta or bread (these are broken down nearly instantly into sugar)... then you know exactly what I'm talking about. And if you think that's bad... it's actually even worse: Because it's now been proven that synthetic sweeteners that many people rely on to help them reduce sugar in their diets are actually worse for you. Studies after studies have shown that these zero-calorie synthetic sweeteners actually trigger chemical reactions in the body that cause you to produce more fat and gain more weight. </p>
+                </div>
+                <div class="col-lg-3" style="text-align: justify;"><strong>TDEE</strong>
+                    <p> When you exercise or simply expend energy through physical activity, you burn additional calories. When you combine your BMR with the calories you burn through physical activity, you get your <b>Total Daily Energy Expenditure.</b></p>
+                </div>
+                <div class="col-lg-3" style="text-align: justify;"><strong>BODYMASS </strong>
+                    <p> Body mass index: A key index for relating weight to height. Abbreviated BMI. BMI is a person's weight in kilograms (kg) divided by his or her height in meters squared. The National Institutes of Health (NIH) now defines normal weight, overweight, and obesity according to BMI rather than the traditional height/weight charts. Overweight is a BMI of 27.3 or more for women and 27.8 or more for men. Obesity is a BMI of 30 or more for either sex (about 30 pounds overweight). A very muscular person might have a high BMI without health risks.</p>
+                </div>
+                <div class="col-lg-3" style="text-align: justify;"><strong>DAILY CALORIES SUGGESTED</strong>
+                    <p> Losing 10 lbs. in one month is a challenging but achievable goal. Most slow and steady diet and exercise plans have you losing around 2 lbs. per week. As you track your daily calories, remember that you can trim calories by changing your diet as well as exercising. Maintain your weight loss once the month is over by making lifestyle changes in your diet plan and workout schedule. Check with your health care provider before your begin any new exercise program or make changes in your diet for weight loss.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-md-pull-6 col-sm-4 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12 col-sm-4 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">HEALTH WATCHER © 2017</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

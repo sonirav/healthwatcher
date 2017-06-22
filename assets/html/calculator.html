@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Watcher Club</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.min.css">
+    <!-- <link rel="stylesheet" href="./assets/css/rickstyle.css"> -->
+    
+ </head>
+
+<body>
+    <body>
+
+    <div> <!--Starting Nav Bar -->
+        <nav class="navbar navbar-default navigation-clean" style="background-color:#2980ef;color:rgb(242,240,240);font-size:20px;">
+            <div class="container">
+    
+              <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">HEALTH WATCHER CLUB</a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active" role="presentation"><a href="/main" style="color:#dfe8ee;">Home </a></li>
+                        <li role="presentation"><a href="/registration" style="color:#dfe8ee;">Profile</a></li>
+                          <li role="presentation"><a href="#" style="background-color:rgba(0,0,0,0.0980392);color:#dfe8ee;">Health Calculators</a></li>
+                        <li role="presentation"><a href="/index" style="color:#dfe8ee;">Logout </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <body background="https://lh3.googleusercontent.com/JwXQQ7otAfeacgsCgovn2EeoTQ_ZMi-fIYeUS510ttWLbJmut-97mUsrZyBu-mSGZ5ZF=h1500">
+        <div class="container">
+            <div class="row">
+
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="font-color:" white"="">
+                   <!-- <h1 class="text-center text-primary">TDEE Calculator</h1>-->
+                    <div>
+
+                    <!--TDEE CALCULATOR JAVASCRIPT START-->
+                    <script>function getActivityLevelValue(form)
+{
+    //initial  
+    activitylevel=0;
+
+    for (var i=0; i < form.activitylevel.length; i++)
+    {
+        if (form.activitylevel[i].checked)
+            {
+                    var activitylevel = form.activitylevel[i].value;
+                }
+        }
+
+    switch(activitylevel)
+        {
+        case "sedentary":
+        activitylevel=1.2;
+    break
+    case "light":
+        activitylevel=1.375;
+    break
+    case "moderate":
+        activitylevel=1.55;
+    break
+    case "very":
+        activitylevel=1.725;
+    break
+    case "extra":
+        activitylevel=1.9;
+    break
+    }   
+
+        return activitylevel;
+}
+
+function getGenderValue(form)
+{
+    //initial
+    gender=0;
+
+    for (var i=0; i < form.gender.length; i++)
+        {
+            if (form.gender[i].checked)
+            {
+                var gender = form.gender[i].value;
+            }   
+        }
+            return gender;
+}
+
+// Determine weight metric from radio buttons
+function getWeightMetricValue(form)
+{
+    //initial
+    weightMetric=0;
+
+    for (var i=0; i < form.weightmetric.length; i++)
+        {
+        if (form.weightmetric[i].checked)
+           {
+           var weightMetric = form.weightmetric[i].value;
+           }
+        }
+            return weightMetric;
+}
+
+// Validates that a radio button is not empty
+function validateEmptyRadioButton(elem, helperMsg)
+{
+    if(elem == 0)
+    {
+        alert(helperMsg);
+        //elem.focus(); // set the focus to this input
+        return false;
+    }
+    return true;
+}
+
+// Validates that a text field is not empty
+function validateEmptyTextField(elem, helperMsg)
+{
+    if(elem.length == 0)
+    {
+        alert(helperMsg);
+        //elem.focus(); // set the focus to this input
+        return false;
+    }
+    return true;
+}
+
+// Validates that the text feild is numerical
+function validateNumeric(elem, helperMsg)
+{
+
+    if(isNaN(elem))
+    {
+        alert(helperMsg);
+        //elem.focus();
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
+// This function calculates tdee 
+function tdeeCalc(gender,weight,feet,inches,age,activitylevel)
+{   
+    var inches=parseInt(inches);
+
+    if (gender=='Male')
+    {
+        weight=weight*13.7;
+        height=(feet*12)+inches;
+        height=height*2.54;  //convert to cm.
+        height=height*5;
+        age=age*6.8;
+        
+        bmr=66+weight+height-age;
+        tdee=bmr*activitylevel;
+        tdee=Math.round(tdee);
+        return tdee;
+    }
+    else
+        weight=weight*9.6;
+        height=(feet*12)+inches;        
+        height=height*2.54;  //convert to cm.
+        height=height*1.8;
+        age=age*4.7;
+        
+        bmr=655+weight+height-age;
+        tdee=bmr*activitylevel;
+        tdee=Math.round(tdee);
+        return tdee;
+}
+
+//Main
+function calculateTDEE(form) 
+{
+    // variables start here
+        var weight=form.weight.value;
+        var feet=form.feet.value;
+        var inches=form.inches.value;
+        var age=form.age.value;
+        var gender=getGenderValue(form);
+        var weightMetric=getWeightMetricValue(form);
+    var activitylevel=getActivityLevelValue(form);
+    //variables end here
+
+    // start validation of the form here
+        validateEmptyRadioButton(gender,'Please choose your gender.');
+        validateEmptyRadioButton(weightMetric,'Please choose a weight metric.');
+    validateEmptyRadioButton(activitylevel,'Please choose an activity level.');
+        validateEmptyTextField(weight,'Please enter your weight.');
+        validateEmptyTextField(feet,'Please enter feet.');
+        validateEmptyTextField(inches,'Please enter inches.');
+        validateEmptyTextField(age,'Please enter your age.');
+        validateNumeric(weight,'Please only enter numbers in the fields.');
+        validateNumeric(feet,'Please only enter numbers in the fields.');
+        validateNumeric(inches,'Please only enter numbers in the fields.');
+        validateNumeric(age,'Please only enter numbers in the fields.');
+        //end validation of the form here
+
+    // if metric equals to pounds then convert to kilograms
+        if (weightMetric=="pounds")
+                var weight=weight/2.2;
+
+    // calculate tdee
+        tdeeCalc(gender,weight,feet,inches,age,activitylevel);
+
+        form.tdee.value = tdee;
+}</script>
+<script type="text/javascript" src="/ff-calculators/tdee.js"></script>
+<form method="post" name="tdeeform"><center>
+<table style="height: 400px; width:100%;" border="0" cellspacing="0" cellpadding="1" align="center">
+<tbody style="text-align: center;">
+<h1 class="text-primary">TDEE Calculator</h1>
+<tr style="text-align: left; background-color: lightblue;">
+<td style="text-align: center; font-weight: bold;"><strong>Gender</strong></td>
+<td style="text-align: left;"><input type="radio" name="gender" value="Male" /><strong>Male</strong></td>
+<td style="text-align: left;"><input type="radio" name="gender" value="Female" /><strong>Female</strong></td>
+<td style="text-align: left;"> </td>
+</tr>
+<tr style="text-align: left; background-color: lightblue;">
+<td style="text-align: center; font-weight: bold;"><strong>Weight</strong></td>
+<td style="text-align: left;"><input id="weight" type="text" name="weight" size="5" /></td>
+<td style="text-align: left;"><input type="radio" name="weightmetric" value="pounds" /><strong>Pounds</strong></td>
+<td style="text-align: left;"><input type="radio" name="weightmetric" value="kilograms" /><strong>Kilograms</strong></td>
+</tr>
+<tr style="text-align: left; background-color: lightblue;">
+<td style="text-align: center; font-weight: bold;"><strong>Height</strong></td>
+<td style="text-align: left;"><input id="feet" type="text" name="feet" size="5" /><strong>Ft.</strong></td>
+<td style="text-align: left;"><input id="inches" type="text" name="inches" size="5" /><strong> Inch.</strong></td>
+<td style="text-align: left;"> </td>
+</tr>
+<tr style="text-align: left; background-color: lightblue;">
+<td style="text-align: center; font-weight: bold;"><strong>Age</strong></td>
+<td style="text-align: left;"><input id="Age" type="text" name="age" size="5" /><strong> Yrs.</strong></td>
+<td style="text-align: left;"> </td>
+<td style="text-align: left;"> </td>
+</tr>
+<tr style="text-align: left; background-color: #000000;">
+<td style="text-align: center; font-weight: bold; font-size: 12pt; color: lightblue;" colspan="4">Please choose your daily activity level:</td>
+</tr>
+<tr style="text-align: left; background-color: lightblue;">
+<td style="text-align: left;" colspan="4"><input type="radio" name="activitylevel" value="sedentary" /><strong> Little or no exercise (ex: desk job)</strong></td>
+</tr>
+<tr style="text-align: left; background-color: lightblue;">
+<td style="text-align: left;" colspan="4"><input type="radio" name="activitylevel" value="light" /><strong> Light exercise (ex: exercising 1-3 days/week)</strong></td>
+</tr>
+<tr style="text-align: left; background-color: lightblue;">
+<td style="text-align: left;" colspan="4"><input type="radio" name="activitylevel" value="moderate" /><strong> Moderate exercise (ex: exercising 3-5 days/week)</strong></td>
+</tr>
+<tr style="text-align: left; background-color: lightblue;">
+<td style="text-align: left;" colspan="4"><input type="radio" name="activitylevel" value="very" /><strong> Heavy exercise (ex: exercising 6-7 days/week)</strong></td>
+</tr>
+<tr style="text-align: left; background-color: lightblue;">
+<td style="text-align: left;" colspan="4"><input type="radio" name="activitylevel" value="extra" /><strong> Daily exercise(ex:exercising 7 days/week & working a physical job)</strong></td>
+</tr>
+<tr style="text-align: left;">
+<td style="text-align: center;" colspan="5"><input onclick="calculateTDEE(this.form)" type="button" value="Calculate Your TDEE" /><input type="text" name="tdee" size="5" /><input type="reset" value="Reset Fields" /></td>
+</tr>
+</tbody>
+</table>
+</center></form>        
+
+<!--TDEE CALCULATOR END-->
+
+                    <br>
+
+                    <!--BMI CALCUATOR START-->
+
+                    <script language="JavaScript">
+<!--
+function calculateBmi() {
+var weight = document.bmiForm.weight.value/2.20462
+var height = document.bmiForm.height.value
+if(weight > 0 && height > 0){   
+var finalBmi = weight/(height/100*height/100)
+document.bmiForm.bmi.value = finalBmi
+if(finalBmi < 18.5){
+document.bmiForm.meaning.value = "Too thin"
+}
+if(finalBmi > 18.5 && finalBmi < 25){
+document.bmiForm.meaning.value = "Healthy"
+}
+if(finalBmi > 25){
+document.bmiForm.meaning.value = "Overweight"
+}
+}
+else{
+alert("Please Fill in everything correctly")
+}
+}
+//-->
+</script>
+
+        <h1 class="text-primary" style="text-align: center;">BMI Calculator</h1>
+
+        <form name="bmiForm" style="background-color: lightblue; width:100%"><br />
+                        Your Weight(lbs): <input type="text" name="weight" size="10"><br /><br />
+                        Your Height(In.): <input type="text" name="height" size="10"><br /><br />
+                        <input type="button" value="Calculate BMI" onClick="calculateBmi()"> &nbsp  <input type="reset" value="Reset" />
+                        <br /><br />
+                        Your BMI        : <input type="text" name="bmi" size="10">
+                        <br /><br />
+                        This Means      : <input type="text" name="meaning" size="25"><br /><br/>
+                       
+          </form>
+
+                     <br>
+
+                     
+                        
+                      
+
+                    <iframe width="353" height="315"
+                    src="https://www.youtube.com/embed/VbFJzkdVOWs">
+                    </iframe>
+                   
+
+                <p class="copyright">HEALTH WATCHER © 2017</p>
+            </div>
+             <!-- <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                        </ul>
+                    </div> Is this necessary???-->
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+</body>
+
+</html>

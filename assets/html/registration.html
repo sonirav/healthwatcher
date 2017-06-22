@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Watcher Club</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asset">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+<div> <!-- Starting Nav Bar -->
+        <nav class="navbar navbar-default navigation-clean" style="background-color:#2980ef;color:rgb(242,240,240);font-size:20px;">
+            <div class="container">
+                <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">HEALTH WATCHER</a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="presentation" role="disabled"><a href="/login" style="color:#dfe8ee;">Home </a></li>
+                        <li role="active"><a href="#" style="background-color:rgba(0,0,0,0.0980392);color:#dfe8ee;">Profile</a></li>
+                        <li role="presentation"><a href="/login" style="color:#dfe8ee;">Logout </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="content" class="content-wrap" align="center"><img class="img-circle" src="assets/img/RUNNING.jpg" width="50%" height="50%"></div>
+    <div class="container">
+        <div>
+            <form action="/registration" method="post">
+                <div class="form-group">
+                    <div id="formdiv">
+                        <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
+                            <div class="col-md-8 col-md-offset-1">
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Name </strong></p>
+                            </div>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input class="form-control" type="text" name="name" placeholder="Name" style="margin-left:0px;font-family:Roboto, sans-serif;">
+                            </div>
+                        </div>
+                        <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;margin-top:-16px;">
+                            <div class="col-md-8 col-md-offset-1">
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Gender </strong></p>
+                            </div>
+                            <div class="col-md-10 col-md-offset-1">
+                                <select class="form-control" name="gender" style="font-family:Roboto, sans-serif;">
+                                    <optgroup label="Gender">
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
+                            <div class="col-md-8 col-md-offset-1">
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;"><strong>Goal Weight</strong></p>
+                            </div>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input class="form-control" type="number" name="goalWeight" style="font-family:Roboto, sans-serif;">
+                            </div>
+                        </div>
+                        <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
+                            <div class="col-md-8 col-md-offset-1">
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;">Height(in) </p>
+                            </div>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input class="form-control" name="height" type="number">
+                            </div>
+                        </div>
+                        <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
+                            <div class="col-md-8 col-md-offset-1">
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;">Weight(lbs) </p>
+                            </div>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input class="form-control" name="weight" type="number">
+                            </div>
+                        </div>
+                        <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
+                            <div class="col-md-8 col-md-offset-1">
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;">Email </p>
+                            </div>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input class="form-control" name="email" type="email">
+                            </div>
+                        </div>
+                        <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
+                            <div class="col-md-8 col-md-offset-1">
+                                <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;">Password </p>
+                            </div>
+                            <div class="col-md-10 col-md-offset-1">
+                                <input class="form-control" name="password" type="password">
+                            </div>
+                        </div>
+                        <div class="row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
+                            <div class="col-md-4 col-md-offset-4 col-xs-12 col-xs-offset-0">
+                                <button class="btn btn-default btn-lg" type="reset" style="font-family:Roboto, sans-serif;">Clear </button>
+                                <button class="btn btn-default btn-lg" type="submit" style="margin-left:16px;">Submit </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
